@@ -6,10 +6,19 @@ protocol PlaySmartProgressDisplayable {
     var progressPercentage: Int { get }
 }
 
+
+
+
+
 protocol PlaySmartBackgroundProviding {
     associatedtype BackgroundContent: View
     func makeBackground() -> BackgroundContent
 }
+
+
+
+
+
 
 // MARK: - Расширенная структура загрузки
 
@@ -23,6 +32,9 @@ struct PlaySmartLoadingOverlay<Background: View>: View, PlaySmartProgressDisplay
         self.progress = progress
         self.backgroundView = background()
     }
+    
+    
+    
     
     var body: some View {
         GeometryReader { geo in
